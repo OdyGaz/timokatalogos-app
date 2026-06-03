@@ -1,0 +1,26 @@
+{
+  "name": "coffee-shop-menu",
+  "version": "1.0.0",
+  "description": "Εφαρμογή Τιμοκαταλόγου για το Coffee Shop",
+  "main": "main-electron.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ody",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^42.3.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.timokatalogos",
+    "productName": "Timokatalogos",
+    "win": {
+      "target": "portable"
+    }
+  }
+}

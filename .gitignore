@@ -1,0 +1,15 @@
+# Παράκαμψη των εξαρτήσεων του Node
+node_modules/
+
+# Αρχεία καταγραφής σφαλμάτων
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Αρχεία συστήματος
+.DS_Store
+Thumbs.db
+
+# Αν χρησιμοποιήσετε εργαλεία builder για παραγωγή .exe αρχείων στο μέλλον
+dist/
+out/

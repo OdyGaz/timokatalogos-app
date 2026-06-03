@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Δημιουργός Τιμοκαταλόγου - Ody</title>
+    
+    <!-- Google Fonts: Εισαγωγή των παραδοσιακών γραμματοσειρών EB Garamond και Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <!-- Σύνδεση των διαχωρισμένων αρχείων CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/preview.css">
+    
+    <!-- Το print.css φορτώνει μόνο όταν ο χρήστης δίνει εντολή εκτύπωσης -->
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Αριστερή Στήλη: Φόρμα Διαχείρισης (Editor) -->
+        <aside id="editor-panel" class="editor-panel">
+            <!-- Η JavaScript (ui.js) θα τοποθετήσει εδώ δυναμικά τα πεδία εισαγωγής, 
+                 τις καρτέλες (Tabs) και τα κουμπιά ελέγχου -->
+        </aside>
+
+        <!-- Δεξιά Στήλη: Ζωντανή Προεπισκόπηση (A4 Preview) -->
+        <main id="preview-panel" class="preview-panel">
+            <!-- Η JavaScript (ui.js) θα σχεδιάσει εδώ δυναμικά τον τελικό κατάλογο 
+                 για να βλέπουμε τις αλλαγές σε πραγματικό χρόνο -->
+        </main>
+    </div>
+
+    <!-- Εισαγωγή του κεντρικού JavaScript Module -->
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

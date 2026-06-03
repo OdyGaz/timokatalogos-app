@@ -1,0 +1,47 @@
+/* css/main.css */
+
+/* Βασικό CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', Georgia, serif;
+    background-color: #1a1a1a; /* Σκούρο φόντο για αντίθεση με το κρεμ χαρτί */
+    color: #e0e0e0;
+    overflow: hidden; /* Αποφυγή scrollbar σε όλη τη σελίδα */
+}
+
+/* split-screen διάταξη */
+.app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Αριστερή Στήλη: Φόρμα Διαχείρισης (Editor) */
+.editor-panel {
+    width: 35%;
+    min-width: 360px;
+    max-width: 500px;
+    background-color: #262626;
+    border-right: 1px solid #3b3b3b;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Κάθετη κύλιση */
+    overflow-x: hidden; /* Απόκρυψη οριζόντιας μπάρας κύλισης */
+    padding: 20px;
+}
+
+/* Δεξιά Στήλη: Ζωντανή Προεπισκόπηση (A4 Preview) */
+.preview-panel {
+    flex-grow: 1;
+    background-color: #333333; /* Ουδέτερο γκρι φόντο */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto; /* scrollbar μόνο μέσα στην προεπισκόπηση */
+    padding: 30px;
+}

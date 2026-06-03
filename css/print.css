@@ -1,0 +1,76 @@
+/* css/print.css */
+
+@media print {
+    /* 1. Καθολικός μηδενισμός περιθωρίων του browser */
+    @page {
+        size: A4;
+        margin: 0 !important;
+    }
+
+    /* 2. Επαναφορά των βασικών στοιχείων του εγγράφου */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        background-color: #ffffff !important;
+        overflow: visible !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* 3. Απενεργοποίηση της διάταξης flex που χρησιμοποιείται στην οθόνη */
+    .app-container {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 4. Απόκρυψη του αριστερού πάνελ επεξεργασίας */
+    .editor-panel {
+        display: none !important;
+    }
+
+    /* 5. Προσαρμογή του πάνελ προεπισκόπησης για εκτύπωση */
+    .preview-panel {
+        display: block !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+        overflow: visible !important;
+    }
+
+    /* 6. Προσαρμογή της σελίδας Α4 για εκτύπωση στη σειρά */
+    .a4-page {
+        position: relative !important;
+        display: block !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        padding: 12mm 18mm 12mm 18mm !important;
+        box-shadow: none !important;
+        
+        background-image: url('../assets/images/katalogo.png') !important;
+        background-size: 100% 100% !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        
+        /* Αναγκαστική αλλαγή σελίδας μετά από κάθε .a4-page */
+        page-break-after: always !important;
+        break-after: page !important;
+    }
+
+    /* 7. Κατάργηση του κόκκινου εφέ υπερχείλισης κατά την εκτύπωση */
+    .menu-column.column-overflow {
+        outline: none !important;
+        background-color: transparent !important;
+        animation: none !important;
+    }
+}

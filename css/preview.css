@@ -1,0 +1,203 @@
+/* css/preview.css */
+
+/* Προσομοίωση σελίδας Α4 με το νέο φόντο */
+.a4-page {
+    width: 210mm;
+    height: 297mm;
+    min-width: 210mm;
+    min-height: 297mm;
+    
+    background-image: url('../assets/images/katalogo.png'); 
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: #1c3322; /* Σκούρο πράσινο ελιάς */
+    padding: 12mm 18mm 12mm 18mm; /* Περιθώρια εντός του πράσινου border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+    position: relative;
+}
+
+/* Κεφαλίδα Καταλόγου - Στοίχιση ανάμεσα στα σκίτσα */
+.menu-header {
+    text-align: center;
+    margin-top: 10mm; /* Κατεβάζει την κεφαλίδα στο σωστό ύψος */
+    height: 38mm;     /* Σταθερό ύψος */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 1ο Επίπεδο: "ΚΑΦΕΝΕΙΟ" */
+.menu-header .header-top-text {
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #1c3322;
+    margin-bottom: 2px;
+}
+
+/* 2ο Επίπεδο: "Η ΓΙΑΝΝΑ" (Μεγάλο, Έντονο, Σκούρο Καφέ) */
+.menu-header .header-main-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #5a3d28; /* Ζεστό Καφέ */
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+/* 3ο Επίπεδο: Διακοσμητικό Κλαδί Ελιάς (SVG) */
+.menu-header .header-divider {
+    width: 150px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+}
+
+/* 4ο Επίπεδο: "ΠΑΠΑΔΙΑΝΙΚΑ ΛΑΚΩΝΙΑΣ" */
+.menu-header .header-subtitle {
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #1c3322;
+    margin-top: 3px;
+}
+
+/* Δίστηλη Διάταξη Προϊόντων - Σπρωγμένη κάτω από τις ζωγραφιές */
+.menu-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-top: 15mm;   /* Σπρώχνει τα προϊόντα πιο κάτω */
+    margin-bottom: 5mm; 
+    height: 174mm;      /* Ύψος για αποφυγή υπερχείλισης στο κάτω μέρος */
+    overflow: hidden;
+}
+
+.menu-column {
+    width: 46%; /* Αφήνει κενό στη μέση */
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+}
+
+/* Κατηγορίες Προϊόντων */
+.menu-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 2mm;
+    font-weight: bold;
+    color: #1c3322;
+}
+
+/* Γραμμή με διαμαντάκι κάτω από τον τίτλο */
+.category-title::after {
+    content: "❖";
+    display: block;
+    font-size: 0.55rem;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+/* Προϊόντα & Τιμές (Τελεία-Τελεία) */
+.menu-item {
+    margin-bottom: 1.5mm;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1.02rem;
+}
+
+.item-title {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.item-dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #1c3322;
+    margin: 0 5px;
+    min-width: 20px; 
+}
+
+.item-price {
+    font-weight: bold;
+    padding-left: 5px;
+    white-space: nowrap;
+}
+
+.item-description {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: #4a5c4d;
+    margin-top: 0.3mm;
+    line-height: 1.1;
+}
+
+/* Κάτω Μέρος Καταλόγου */
+.menu-footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    padding-bottom: 11mm; /* Σπρώχνει την επικοινωνία ακριβώς πάνω από το "Καλώς Ήρθατε!" */
+}
+
+/* Οριζόντια Γραμμή Επικοινωνίας (Πάνω από το banner) */
+.menu-contact-row {
+    font-size: 0.85rem;
+    color: #1c3322;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Οπτικό εφέ όταν μια στήλη προϊόντων υπερχειλίζει (μόνο για την οθόνη) */
+.menu-column.column-overflow {
+    outline: 2px dashed #ff4d4d;
+    outline-offset: 4px;
+    background-color: rgba(255, 77, 77, 0.03); /* Πολύ απαλό κόκκινο φόντο */
+    animation: pulse-overflow 2s infinite;
+}
+
+/* Εφέ παλμού για να τραβάει την προσοχή χωρίς να ενοχλεί */
+@keyframes pulse-overflow {
+    0% { outline-color: rgba(255, 77, 77, 0.3); }
+    50% { outline-color: rgba(255, 77, 77, 0.8); }
+    100% { outline-color: rgba(255, 77, 77, 0.3); }
+}
+
+/* Στην οθόνη, εμφανίζουμε μόνο τη σελίδα που αντιστοιχεί στο επιλεγμένο Tab */
+@media screen {
+    .a4-page {
+        display: none !important;
+    }
+    .a4-page.active-page {
+        display: flex !important;
+    }
+}
